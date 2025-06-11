@@ -16,8 +16,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #FF7300;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -43,6 +43,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.87 0 0);
+  --title-primary: #8F8F8F;
+  --title-secondary: #E9E9E9;
+  --highlight: #FF7300;
 }
 
 .dark {
@@ -52,8 +55,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: #FF7300;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -78,6 +81,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  --title-primary: #8F8F8F;
+  --title-secondary: #E9E9E9;
+  --highlight: #FF7300;
 }
 
 @theme inline {
@@ -146,4 +152,48 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+}
+
+/* Custom scrollbar styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom color classes */
+.text-title-primary {
+  color: var(--title-primary);
+}
+
+.text-title-secondary {
+  color: var(--title-secondary);
+}
+
+.text-highlight {
+  color: var(--highlight);
+}
+
+.bg-highlight {
+  background-color: var(--highlight);
+}
+
+.border-highlight {
+  border-color: var(--highlight);
+}
+
+/* Custom button styles */
+.btn-highlight {
+  background-color: var(--highlight);
+  color: white;
+  border-radius: 9999px;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  border-radius: 9999px;
 }
