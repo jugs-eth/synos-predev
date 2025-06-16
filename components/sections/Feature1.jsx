@@ -11,12 +11,12 @@ export default function Feature1() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left side - Content */}
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-            <h2 className="text-center md:text-left text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight">
+            <h2 className="text-center md:text-left text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight md:pr-10">
               <span className="text-title-primary">Raise funds easily </span>
               <span className="text-title-secondary">and more secure than ever.</span>
             </h2>
             
-            <p className="text-md text-title-primary leading-relaxed text-center md:text-left md:max-w-[30vw]">
+            <p className="text-lg text-title-primary leading-relaxed text-center md:text-left md:max-w-[30vw] font-medium">
               <span className="text-title-secondary font-semibold">Hyper secure battle-hardened smart contracts.</span> All of our contracts are open source with frequent public audits from industry renowned developers.
             </p>
             

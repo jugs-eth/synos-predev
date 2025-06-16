@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="bg-background">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo and text */}
-          <div className="col-span-2 lg:col-span-1">
+          <div className="col-span-2">
           <Link href="/" className="flex items-center space-x-2 pb-4">
             <Image src="/images/logo.svg" alt="Synos" width={101} height={51} />
           </Link>
@@ -18,10 +18,10 @@ export default function Footer() {
           </div>
 
           {/* Product menu */}
-          <div className="col-span-2">
-            <div className="grid grid-cols-2 gap-8">
+          <div className="col-span-2 text-left md:text-right">
+            <div className="grid grid-cols-3 gap-8">
               {/* Product menu */}
-              <div>
+              <div className="md:col-span-2">
                 <h3 className="font-semibold mb-4 text-title-secondary">Product</h3>
                 <ul className="space-y-2">
                   <li>

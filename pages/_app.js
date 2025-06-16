@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { ThirdwebProvider } from "thirdweb/react";
 import { ThemeProvider } from "next-themes";
-import { Inter } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/next"
 
 

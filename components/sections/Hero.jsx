@@ -24,7 +24,7 @@ export default function Hero() {
           </h1>
           
           {/* Description */}
-          <p className="text-md text-muted-foreground max-w-lg mb-8 leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
             <span className="text-title-secondary font-semibold">Synos is an open source, human-centric, and fully decentralised funding platform.</span>
             <span className="text-title-primary font-medium"> Launch single or multi-round initial coin offerings on-chain easily with our widget or your own page.</span>
           </p>
