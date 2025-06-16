@@ -474,11 +474,13 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle className="text-title-secondary">Menu</SheetTitle>
+              <Link href="/" className="flex items-center space-x-2 -mt-1">
+            <Image src="/images/logo.svg" alt="Synos" width={101} height={51} className='w-[30%]' />
+          </Link>
               </SheetHeader>
-              <nav className="flex flex-col space-y-4 mt-8">
+              <nav className="flex flex-col space-y-4 mt-2 px-4">
                 <div>
-                  <h3 className="text-lg font-medium text-title-secondary mb-2">Use Cases</h3>
+                  <h3 className="text-md font-semibold text-title-secondary mb-2">Use Cases</h3>
                   <div className="space-y-2 ml-4">
                     {useCasesItems.map((item, index) => (
                       <Link key={index} href={item.href} className="block text-sm text-muted-foreground hover:text-highlight transition-colors py-1">
@@ -488,12 +490,12 @@ export default function Header() {
                   </div>
                 </div>
                 
-                <Link href="#benefits" className="text-lg font-medium transition-colors hover:text-highlight text-title-primary py-2">
+                <Link href="#benefits" className="text-md font-semibold transition-colors hover:text-highlight text-title-primary py-2">
                   Benefits
                 </Link>
                 
                 <div>
-                  <h3 className="text-lg font-medium text-title-secondary mb-2">Features</h3>
+                  <h3 className="text-md font-semibold text-title-secondary mb-2">Features</h3>
                   <div className="space-y-2 ml-4">
                     {featuresCards.map((item, index) => (
                       <Link key={index} href="#" className="block text-sm text-muted-foreground hover:text-highlight transition-colors py-1">
