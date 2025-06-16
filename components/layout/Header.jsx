@@ -21,6 +21,23 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const useCasesItems = [
+    {
+      title: 'DeFi Protocols',
+      description: 'Build and deploy decentralized finance applications',
+      icon: '💰',
+      href: '#defi',
+      features: ['Lending & Borrowing', 'DEX Trading', 'Yield Farming', 'Staking']
+    },
+    {
+      title: 'NFT Marketplaces',
+      description: 'Create and manage NFT trading platforms',
+      icon: '🎨',
+      href: '#nft',
+      features: ['Minting Tools', 'Auction System', 'Royalty Management', 'Metadata Standards']
+    }
+  ];
+
   
 
   const useCasesCards = [
@@ -398,31 +415,29 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col h-full">
               <SheetHeader>
-              <Link href="/" className="flex items-center space-x-2 -mt-1">
-            <Image src="/images/logo.svg" alt="Synos" width={101} height={51} className='w-[30%]' />
-          </Link>
+                <Link href="/" className="flex items-center space-x-2 -mt-1">
+                  <Image src="/images/logo.svg" alt="Synos" width={101} height={51} className='w-[30%]' />
+                </Link>
               </SheetHeader>
-              <nav className="flex flex-col space-y-4 mt-2 px-4">
+              <nav className="flex-1 flex flex-col space-y-4 mt-2 px-4 overflow-y-auto">
                 <div>
                   <h3 className="text-md font-semibold text-title-secondary mb-2">Use Cases</h3>
-                  <div className="space-y-2 ml-4">
-                    {useCasesItems.map((item, index) => (
-                      <Link key={index} href={item.href} className="block text-sm text-muted-foreground hover:text-highlight transition-colors py-1">
+                  <div className="space-y-2">
+                    {useCasesCards.map((item, index) => (
+                      <Link key={index} href="#" className="block text-sm text-muted-foreground hover:text-highlight transition-colors py-1">
                         {item.title}
                       </Link>
                     ))}
                   </div>
                 </div>
-                
                 <Link href="#benefits" className="text-md font-semibold transition-colors hover:text-highlight text-title-primary py-2">
                   Benefits
                 </Link>
-                
                 <div>
                   <h3 className="text-md font-semibold text-title-secondary mb-2">Features</h3>
-                  <div className="space-y-2 ml-4">
+                  <div className="space-y-2">
                     {featuresCards.map((item, index) => (
                       <Link key={index} href="#" className="block text-sm text-muted-foreground hover:text-highlight transition-colors py-1">
                         {item.title}
@@ -430,24 +445,23 @@ export default function Header() {
                     ))}
                   </div>
                 </div>
-                
-                {/* Mobile buttons */}
-                <div className="flex flex-col gap-3 pt-4 border-t">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="btn-white hover:bg-gray-50 transition-colors justify-start"
-                  >
-                    Developer Portal
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    className="btn-highlight hover:bg-highlight/90 transition-colors justify-start"
-                  >
-                    Join Waitlist
-                  </Button>
-                </div>
               </nav>
+              {/* Sticky footer buttons */}
+              <div className="flex flex-col gap-3 pt-4 border-t bg-background sticky bottom-0 left-0 right-0 z-10 px-4 pb-4">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="btn-white hover:bg-gray-50 transition-colors"
+                >
+                  Developer Portal
+                </Button>
+                <Button 
+                  size="lg" 
+                  className="btn-highlight hover:bg-highlight/90 transition-colors"
+                >
+                  Join Waitlist
+                </Button>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
