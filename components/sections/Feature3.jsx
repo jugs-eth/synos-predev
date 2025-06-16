@@ -1,69 +1,53 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BarChart3 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Feature3() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-12 !pt-6 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left side - Image */}
-          <div className="relative order-2 lg:order-1">
-            <div className="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-highlight/20 to-highlight/5 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl sm:text-6xl mb-4">📊</div>
-                <div className="text-base sm:text-lg font-medium text-muted-foreground">
-                  Advanced Analytics
-                </div>
-              </div>
-            </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-highlight/20 rounded-full"></div>
-            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-8 h-8 sm:w-12 sm:h-12 bg-highlight/10 rounded-full"></div>
-            <div className="absolute top-1/2 -left-3 sm:-left-6 w-4 h-4 sm:w-6 sm:h-6 bg-highlight/30 rounded-full"></div>
+          <div className="relative order-1 lg:order-1">
+            <Image 
+              src="/images/features-right.png" 
+              alt="Features" 
+              width={600} 
+              height={400} 
+              className="w-full h-auto rounded-2xl"
+            />
           </div>
 
           {/* Right side - Content */}
-          <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
-            <div className="flex items-center gap-2 text-highlight font-medium">
-              <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="text-sm sm:text-base">Advanced Analytics</span>
-            </div>
-            
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-title-primary">Data-Driven</span>
-              <span className="text-title-secondary block">Insights</span>
+          <div className="space-y-4 sm:space-y-6 order-2 lg:order-2 md:pl-10">
+            <h2 className="text-center md:text-left text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight">
+              <span className="text-title-primary">Raise funds easily </span>
+              <span className="text-title-secondary">and more secure than ever.</span>
             </h2>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Get real-time insights into your application performance, user behavior, 
-              and blockchain metrics. Our advanced analytics help you make informed 
-              decisions and optimize your applications for success.
+            <p className="text-md text-title-primary leading-relaxed text-center md:text-left md:max-w-[30vw]">
+              <span className="text-title-secondary font-semibold">Hyper secure battle-hardened smart contracts.</span> All of our contracts are open source with frequent public audits from industry renowned developers.
             </p>
             
-            <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-highlight rounded-full"></div>
-                <span className="text-sm sm:text-base">Real-time performance monitoring</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-highlight rounded-full"></div>
-                <span className="text-sm sm:text-base">User behavior analytics</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-highlight rounded-full"></div>
-                <span className="text-sm sm:text-base">Custom dashboard creation</span>
-              </div>
+            <div className="flex flex-col sm:flex-row sm:items-start items-center gap-4">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="btn-white hover:bg-gray-50 transition-colors text-black font-semibold px-8 py-6 w-full sm:w-auto"
+              >
+                Get Started
+              </Button>
+              
+              <Link 
+                href="#" 
+                className="text-sm text-muted-foreground hover:text-highlight transition-colors flex items-center gap-1 font-semibold"
+              >
+                <span className="text-title-secondary underline">API Reference</span>
+                <ArrowRight className="h-3 w-3" />
+              </Link>
             </div>
-            
-            <Button 
-              size="lg" 
-              className="btn-highlight hover:bg-highlight/90 transition-colors mt-4 sm:mt-6 w-full sm:w-auto"
-            >
-              Explore Analytics
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
         </div>
       </div>
