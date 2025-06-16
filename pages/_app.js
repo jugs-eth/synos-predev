@@ -2,14 +2,16 @@ import "@/styles/globals.css";
 import { ThirdwebProvider } from "thirdweb/react";
 import { ThemeProvider } from "next-themes";
 import { Inter } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ subsets: ['latin'] });
+
 
 export default function App({ Component, pageProps }) {
   return (
     <ThirdwebProvider>
+      <Analytics />
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-        <div className={`min-h-screen flex flex-col ${inter.className}`}>
+        <div className={`min-h-screen flex flex-col`}>
           <Component {...pageProps} />
         </div>
       </ThemeProvider>
