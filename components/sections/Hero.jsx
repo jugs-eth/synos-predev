@@ -18,13 +18,13 @@ export default function Hero() {
           </div>
 
           {/* Title */}
-          <h1 className="text-center md:text-left text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-semibold tracking-tight mb-6 md:leading-[4.5rem] leading-tight">
+          <h1 className="text-center md:text-left text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-semibold tracking-tight mb-6 md:leading-[4.5rem] leading-tight">
             <span className="text-title-primary">Manage your funding</span>
             <span className="text-title-secondary block">rounds easier than ever.</span>
           </h1>
           
           {/* Description */}
-          <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+          <p className="text-sm md:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
             <span className="text-title-secondary font-semibold">Synos is an open source, human-centric, and fully decentralised funding platform.</span>
             <span className="text-title-primary font-medium"> Launch single or multi-round initial coin offerings on-chain easily with our widget or your own page.</span>
           </p>
