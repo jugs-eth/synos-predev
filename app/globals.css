@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @plugin "tailwind-scrollbar";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Albert Sans", sans-serif;
+}
 
 :root {
     --shade-01: #141414;
@@ -201,7 +209,7 @@
     --default-transition-duration: 0.2s;
     --default-border-width: 1.5px;
     --border-width-1: 1px;
-    --font-inter: var(--font-inter-display);
+    --font-albert-sans: var(--font-albert-sans);
     --text-0: 0;
     --text-h1: 6rem;
     --text-h1--line-height: 1.15;
@@ -358,7 +366,7 @@
         @apply min-h-48 px-4.5 py-4 outline-none [&_ul]:list-disc [&_ul]:pl-4;
     }
     .custom-datepicker .react-datepicker {
-        @apply relative z-3 p-4 rounded-3xl bg-b-surface1 font-inter;
+        @apply relative z-3 p-4 rounded-3xl bg-b-surface1 font-albert-sans;
     }
     .custom-datepicker .react-datepicker__day-names,
     .custom-datepicker .react-datepicker__week {
