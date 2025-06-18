@@ -1,4 +1,4 @@
-import Layout from "@/components/layout/Layout";
+import Layout from "@/components/homeLayout/Layout";
 import Hero from "@/components/sections/Hero";
 import Media from "@/components/sections/Media";
 import QuoteSection from "@/components/sections/Quote";
